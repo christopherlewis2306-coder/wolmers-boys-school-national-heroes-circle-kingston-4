@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+CIT2011 | Wolmer's Boys' School | National Heroes Circle, Kingston 4
+Group members (full name | student ID | lab day/time)
+Shaney Byfield | 2500730 | Lab: Tuesday 3–5 p.m.
+Christopher Lewis | 2505274 | Lab: Tuesday 3–5 p.m.
+Kelsey James | 2510038 | Lab: Tuesday 3–5 p.m.
+Vacketia Smith | 2509363 | Lab: Tuesday 3–5 p.m.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Wolmer’s Boys’ School</title>
+  <link rel="stylesheet" href="assets/css/portal.css">
+  <script defer src="assets/js/store.js"></script><script defer src="assets/js/public.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="monogram" aria-hidden="true">W</span><span>Wolmer’s Boys’ School<small>School portal</small></span></a>
+      <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a><a href="login.html">Sign in</a></nav>
+    </div>
+  </header>
+  <main id="main" class="wrap section">
+  <p class="eyebrow accent">School office</p><h1>Contact us</h1>
+  <div class="two-col">
+    <section class="panel"><h2>Contact information</h2><address>National Heroes Circle<br>Kingston 4, Jamaica<br><a href="tel:+18769228678">(876) 922-8678</a><br><a href="tel:+18769224055">(876) 922-4055</a><br><a href="mailto:info@wolmers.org">info@wolmers.org</a></address></section>
+    <section class="panel"><h2>Send a demo message</h2><p>The portal saves demo messages on this browser. For school enquiries, use the contact details on this page.</p>
+    <form id="contact-form" class="stack">
+      <label>Full name<input name="name" autocomplete="name" required minlength="2" maxlength="70" pattern=".*\S.*"></label>
+      <label>Email address<input type="email" name="email" autocomplete="email" required maxlength="100"></label>
+      <label>Subject<input name="subject" required minlength="3" maxlength="80" pattern=".*\S.*"></label>
+      <label>Message<textarea name="message" required minlength="10" maxlength="500" rows="5"></textarea></label>
+      <button>Save message</button><p id="message-status" class="status" role="status"></p>
+    </form></section>
+  </div>
+</main>
+  <footer class="site-footer"><div class="wrap footer-inner">
+    <span>Wolmer’s Boys’ School · National Heroes Circle, Kingston 4</span>
+    <span>CIT2011 student project · Demonstration portal</span>
+  </div></footer>
+</body>
+</html>

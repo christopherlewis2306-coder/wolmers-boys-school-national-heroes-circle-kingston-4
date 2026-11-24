@@ -1,0 +1,112 @@
+/*
+CIT2011 | Wolmer's Boys' School | National Heroes Circle, Kingston 4
+Group members (full name | student ID | lab day/time)
+Shaney Byfield | 2500730 | Lab: Tuesday 3–5 p.m.
+Christopher Lewis | 2505274 | Lab: Tuesday 3–5 p.m.
+Kelsey James | 2510038 | Lab: Tuesday 3–5 p.m.
+Vacketia Smith | 2509363 | Lab: Tuesday 3–5 p.m.
+*/
+:root {
+  --wine: #651932;
+  --dark-wine: #39121f;
+  --gold: #f3ce76;
+  --ink: #2e2428;
+  --muted: #64565b;
+  --paper: #faf7f1;
+  --line: #e4d9d8;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+a { color: var(--wine); text-underline-offset: .22em; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #a86b09; outline-offset: 3px; }
+h1, h2, h3 { line-height: 1.14; margin: 0 0 .65em; }
+h1, h2 { font-family: Georgia, serif; }
+h1 { font-size: clamp(2.35rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+p { margin: 0 0 1em; }
+.wrap { width: min(1120px, calc(100% - 3rem)); margin-inline: auto; }
+.section { padding-block: clamp(2rem, 5vw, 4rem); }
+.site-header { background: #fffdf9; border-bottom: 1px solid var(--line); }
+.header-inner, .footer-inner, .dashboard-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.header-inner { min-height: 5rem; padding-block: .8rem; flex-wrap: wrap; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 750; line-height: 1.15; text-decoration: none; }
+.brand small { display: block; color: var(--muted); font-weight: 500; margin-top: .25rem; }
+.monogram { display: grid; place-items: center; background: var(--wine); color: var(--gold); width: 2.55rem; height: 2.55rem; border-radius: .35rem; font: bold 1.55rem Georgia, serif; }
+nav { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+nav a { font-weight: 650; text-decoration: none; }
+nav a:hover, nav a[aria-current] { text-decoration: underline; }
+.skip { position: absolute; top: .25rem; left: .25rem; padding: .5rem 1rem; background: white; transform: translateY(-150%); z-index: 1; }
+.skip:focus { transform: none; }
+.hero { background: linear-gradient(112deg, #35101f, #651932 75%, #741e38); color: white; border-bottom: .3rem solid var(--gold); }
+.hero-inner { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 2rem; padding-block: clamp(3rem, 8vw, 7rem); }
+.hero h1 { font-size: clamp(3.05rem, 8vw, 6.25rem); margin-bottom: .25em; letter-spacing: -.045em; }
+.hero-copy, .intro { max-width: 60ch; font-size: 1.14rem; }
+.hero-copy { color: #fae6ed; margin-bottom: 1.6rem; }
+.eyebrow { font-size: .76rem; letter-spacing: .13em; text-transform: uppercase; font-weight: 800; color: var(--gold); }
+.accent { color: var(--wine); }
+.motto { display: grid; place-items: center; }
+.motto div { display: grid; place-content: center; text-align: center; width: min(100%, 19rem); aspect-ratio: 1; border-radius: 50%; border: 1px solid #cba165; outline: 1px solid #cba165; outline-offset: -12px; color: var(--gold); }
+.motto span { font: bold clamp(4rem, 11vw, 9rem)/.95 Georgia, serif; }
+.motto strong { font: 1.45rem Georgia, serif; margin-block: .65rem; }
+.motto small { letter-spacing: .17em; }
+button, .button { display: inline-block; width: fit-content; border: 1px solid var(--wine); border-radius: .35rem; padding: .6rem .95rem; background: var(--wine); color: white; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
+button:hover, .button:hover { filter: brightness(1.15); }
+.gold { background: var(--gold); color: var(--dark-wine); border-color: var(--gold); }
+.hero-link { display: inline-block; margin: .65rem 0 .65rem .65rem; color: white; }
+.secondary { color: var(--wine); background: white; }
+.danger { background: white; color: #8c1d33; }
+.cards, .two-col, .fields { display: grid; gap: 1rem; }
+.cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.card, .panel { background: #fffdf9; border: 1px solid var(--line); border-radius: .65rem; padding: clamp(1rem, 3vw, 1.7rem); min-width: 0; }
+.card { border-top: 3px solid var(--wine); }
+.card p:last-child, .status:last-child { margin-bottom: 0; }
+.panel { margin-block: 1rem; }
+.login { max-width: 31rem; margin-inline: auto; }
+.timeline { display: grid; grid-template-columns: auto 1fr; gap: .6rem 1rem; }
+.timeline dt { font-weight: 800; color: var(--wine); }
+.timeline dd { margin: 0; }
+.stack { display: grid; gap: .8rem; }
+.fields { grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); align-items: end; margin-bottom: 1rem; }
+label { display: grid; gap: .3rem; font-weight: 650; min-width: 0; }
+input, textarea, select { width: 100%; min-width: 0; border: 1px solid #a7989d; border-radius: .3rem; background: white; padding: .55rem .6rem; font: inherit; color: var(--ink); }
+textarea { resize: vertical; }
+.status { color: var(--wine); font-weight: 700; }
+.status:empty { display: none; }
+.dashboard-nav { margin-bottom: 1.5rem; border-block: 1px solid var(--line); padding-block: .75rem; }
+.dashboard-heading h1 { margin-bottom: .2em; }
+.dashboard-heading { align-items: flex-start; }
+.actions { display: flex; gap: .4rem; align-items: center; flex-wrap: wrap; }
+.filter { max-width: 18rem; margin-block: 1rem; }
+.table-wrap { overflow-x: auto; margin-bottom: 1rem; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: .65rem .7rem; border-bottom: 1px solid var(--line); }
+th { background: #f3e7e9; white-space: nowrap; }
+td input { width: 6rem; }
+td button { padding: .25rem .5rem; }
+.badge { font-weight: 750; border-radius: 1rem; padding: .18rem .55rem; white-space: nowrap; }
+.paid { background: #deefe3; color: #235634; }
+.pending { background: #fff0c9; color: #694801; }
+.outstanding { background: #f9e1e7; color: #81243a; }
+#ledger-totals { margin-block: 1rem; }
+#ledger-totals strong { display: block; font-size: 1.25rem; }
+meter { width: 100%; max-width: 14rem; }
+.site-footer { color: #f5e8ed; background: var(--dark-wine); padding-block: 1.35rem; font-size: .86rem; }
+.footer-inner { flex-wrap: wrap; }
+@media (max-width: 700px) {
+  .wrap { width: calc(100% - 1.5rem); }
+  .motto { display: none; }
+  .hero-inner, .cards, .two-col { grid-template-columns: 1fr; }
+  .dashboard-heading { flex-wrap: wrap; }
+  .header-inner { gap: .7rem; }
+}
+@media print {
+  body { background: white; }
+  .site-header, .site-footer, .skip, .dashboard-heading, .dashboard-nav, #grades,
+  #reports > :not(#report-output) { display: none !important; }
+  .wrap { width: 100%; }
+  #reports { border: 0; padding: 0; }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+CIT2011 | Wolmer's Boys' School | National Heroes Circle, Kingston 4
+Group members (full name | student ID | lab day/time)
+Shaney Byfield | 2500730 | Lab: Tuesday 3–5 p.m.
+Christopher Lewis | 2505274 | Lab: Tuesday 3–5 p.m.
+Kelsey James | 2510038 | Lab: Tuesday 3–5 p.m.
+Vacketia Smith | 2509363 | Lab: Tuesday 3–5 p.m.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student records | Wolmer’s Boys’ School</title>
+  <link rel="stylesheet" href="assets/css/portal.css">
+  <script defer src="assets/js/store.js"></script><script defer src="assets/js/dashboard.js"></script><script defer src="assets/js/reports.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="monogram" aria-hidden="true">W</span><span>Wolmer’s Boys’ School<small>School portal</small></span></a>
+      <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="viewer.html" aria-current="page">Dashboard</a></nav>
+    </div>
+  </header>
+  <main id="main" class="wrap section" data-role="viewer" hidden>
+  <div class="dashboard-heading"><div><p class="eyebrow accent">School portal</p><h1>Student records</h1><p>Search profiles, grades and tuition statements.</p></div><button type="button" id="logout" class="secondary">Sign out</button></div>
+  <nav class="dashboard-nav" aria-label="Dashboard sections"><a href="#reports">Search records</a></nav>
+  <section id="reports" class="panel"><h2>Search and reports</h2>
+      <div class="fields">
+        <label>Search by name or student ID<input type="search" id="report-search"></label>
+        <label>Semester<select id="report-semester"></select></label>
+        <label>Grade level<select id="report-level"></select></label>
+        <label>Account status<select id="report-status"><option value="">All statuses</option><option>Paid</option><option>Pending</option><option>Outstanding</option></select></label>
+        <label>Student<select id="report-student"></select></label>
+      </div>
+      <div id="report-output" aria-live="polite"></div>
+      <button type="button" id="print-report" class="secondary" hidden>Print report</button>
+    </section>
+</main>
+  <footer class="site-footer"><div class="wrap footer-inner">
+    <span>Wolmer’s Boys’ School · National Heroes Circle, Kingston 4</span>
+    <span>CIT2011 student project · Demonstration portal</span>
+  </div></footer>
+</body>
+</html>
